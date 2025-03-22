@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class="d-flex justify-content-around  align-items-center">
-        <a href="trang_chitiet.php"><img class="logo_header border rounded-circle" src="./public/imgs/UBND_TP_HCM.png" alt=""></a>
+        <a href="trang_chitiet.php"><img class="logo_header border rounded-circle" src="../public/imgs/UBND_TP_HCM.png" alt=""></a>
         <h1>Hội thi Học sinh, sinh viên giỏi nghề</h1>
     </header>
     <nav class="home_nav">
