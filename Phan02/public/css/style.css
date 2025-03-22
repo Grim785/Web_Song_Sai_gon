@@ -1,0 +1,259 @@
+/* trang intro */
+
+.intro_article{
+    position: absolute;
+    background: url(../imgs/map_songsaigon.jpg) no-repeat center;
+    background-size: 100% 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    z-index: -2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro_article::after
+{
+    content: "";
+    background-color: rgba(1, 55, 71, 0.85);
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.intro_content{
+    background-color: white;
+    height: 600px;
+    width: 800px;
+    z-index: 3;
+}
+
+.intro_map_container{
+    position: relative;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro_map{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background: url(../imgs/map_songsaigon.jpg) no-repeat center;
+    transition: all 500ms ease-in-out;
+}
+
+
+.intro_move{
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+
+.intro_move_up:hover ~ .intro_map{
+    background-position: top left;
+}
+
+.intro_move_up:hover ~ .intro_map>.intro_location_icon{
+    top: 18%;
+    left: 16%;
+}
+
+.intro_move_down:hover ~ .intro_map>.intro_location_icon{
+    top: 80%;
+    left: 57%;
+}
+
+.intro_move_down:hover ~ .intro_map{
+    background-position: 100% 100%;
+}
+
+.intro_location_icon{
+    top: 38%;
+    left: 26%;
+    position: absolute;
+    transition: all 700ms ease-in-out;
+}
+
+.intro_chevron{
+    position: absolute;
+    z-index: 12;
+    padding: 10px;
+}
+
+.intro_chevron:hover{
+    cursor: pointer;
+}
+
+
+.intro_chevron_up{
+    top:0;
+    margin-top: 20px;
+}
+
+.intro_chevron_down{
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+.intro_move_up{
+    top: 0;
+}
+
+.intro_move_down{
+    bottom: 0;
+}
+
+.intro_title{
+    text-align: center;
+    height: 600px;
+    padding: 20px;
+    transform: rotateZ(180deg);
+    writing-mode: vertical-rl;
+    z-index: 5;
+    font-family: SVN-Batman Forever Alternate;
+    color: transparent !important;
+    animation: infinite 0.5s change_color;
+}
+
+.intro_title:hover{
+    color: transparent;
+}
+
+@keyframes change_color{
+    0%{
+        -webkit-text-stroke:1px #999999; 
+    }  
+    100%{
+        -webkit-text-stroke:1px #ffffff;
+    }
+}
+
+.intro_icons{
+    display: flex;
+    justify-content: space-around;
+    height: 20%;
+    position: relative;
+    align-items: center;
+}
+
+.intro_logo{
+    height: auto;
+    width: 150px;
+}
+
+.intro_link_main{
+    position: relative;
+    bottom: 0;
+    padding-bottom: 20px;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.intro_move{
+    height: 50px;
+}
+
+/* trang chủ */
+
+*{
+    list-style-type: none;
+}
+
+.logo_header{
+    height: 70px;
+    width: 70px;
+}
+
+.home_nav
+{
+    height: 50px;
+    width: 100%;
+    background-color: #119c7c;
+}
+
+.home_nav>ul>li:hover{
+    background-color: #33ace2 ;
+    border-radius: 4px;
+}
+
+.home_container{
+    min-height: 1000px;
+}
+
+.home_content
+{
+    min-height: 130px;
+    height: auto;
+}
+
+.img_box{
+    height: 50%;
+    overflow: hidden;
+}
+
+.home_content_img{
+    height:100%;
+    transition: all 0.7s ease-in-out;
+}
+
+.home_content:hover .home_content_img{
+    transform: scale(1.3);
+    filter: brightness(1.3);
+}
+
+.card:hover .home_content_img{
+    transform: scale(1.3);
+    filter:brightness(1.3);
+}
+
+.more{
+    text-decoration: none;
+}
+
+.more:hover{
+    color: #ed3237!important;
+}
+
+
+footer{
+    background-color: #ed3237;
+}
+
+.sm_nav:hover>li{
+    display: flex!important;
+}
+
+.list_post{
+    height: 400px;
+    overflow-y: scroll; 
+}
+
+.list_post::-webkit-scrollbar{
+    width: 10px;
+}
+
+.list_post::-webkit-scrollbar-thumb
+{
+    background-color:#FBBB25;
+    border-radius: 20px;
+
+}
+
+.list_post::-webkit-scrollbar-track
+{
+    box-shadow: inset 0px 0px 4px grey;
+    border-radius: 20px;
+}
+
+input[type="checkbox"]:checked + .label_chk{
+    color:#FBBB25;
+}
